@@ -2,10 +2,11 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {UsersListComponent} from './users-list/users-list.component';
+
 const router: Routes = [
-  {path: '', component:UsersListComponent},
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'user', component:UsersListComponent}
+  {path: 'usersList', component: UsersListComponent},
+  {path: '**', redirectTo: 'dashboard', pathMatch: 'full'}
 ];
 
 @NgModule({
