@@ -26,6 +26,14 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
+      <li>
+        <a [routerLink]="['/user']">
+          <i class="fa fa-dashboard"></i> <span>Category</span>
+          <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+        </a>
+      </li>
       <li class="active treeview">
         <a href="#">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
