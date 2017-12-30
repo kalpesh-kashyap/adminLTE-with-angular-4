@@ -1,12 +1,9 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {UsersListComponent} from './users-list/users-list.component';
+import {AuthGuard} from './authentications/auth.guard';
 
 const router: Routes = [
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'usersList', component: UsersListComponent},
-  {path: '**', redirectTo: 'dashboard', pathMatch: 'full'}
+  {path: '', redirectTo:'dashboard', pathMatch:'full' , canActivate: [AuthGuard]},
 ];
 
 @NgModule({

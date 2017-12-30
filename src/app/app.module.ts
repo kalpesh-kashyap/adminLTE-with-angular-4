@@ -2,22 +2,22 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {DashboardComponent} from './dashboard/dashboard.component';
+
 import {AppRouter} from './app.router';
 import {CommonModules} from './common/common.module';
-import { UsersListComponent } from './users-list/users-list.component';
-
+import {MainModule} from './mail/main.module';
+import {AuthenticationModule} from './authentications/authentication.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    UsersListComponent
+    AppComponent
   ],
   imports: [
+    MainModule,
     BrowserModule,
     AppRouter,
-    CommonModules
+    CommonModules,
+    AuthenticationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
